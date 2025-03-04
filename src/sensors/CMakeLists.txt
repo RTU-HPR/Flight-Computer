@@ -12,4 +12,5 @@ target_link_libraries(sensors
     FreeRTOS-Kernel-Heap4
     lsm6dsl
     ms5611
+    bmp180
 )

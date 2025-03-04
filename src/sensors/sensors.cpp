@@ -84,11 +84,32 @@ void ms5611_task(void *pvParameters)
     float temp, pressure;
     if (ms5611_read_temp_pressure(&sensor, &temp, &pressure))
     {
+      printf("Time: %.2f\n", (float)to_ms_since_boot(get_absolute_time()) / 1000.0f);
+      printf("Temp: %.2f\n", temp);
+      printf("Pressure: %.2f\n\n", pressure);
     }
-    printf("Time: %.2f\n", (float)to_ms_since_boot(get_absolute_time()) / 1000.0f);
-    printf("Temp: %.2f\n", temp);
-    printf("Pressure: %.2f\n\n", pressure);
     
     vTaskDelay(100);
+  }
+}
+
+void bmp180_task(void *pvParameters)
+{
+  bmp180::BMP180_Sensor sensor;
+  bmp180_init(&sensor);
+
+  while (true)
+  {
+    float temp;
+    uint32_t pressure;
+
+    if (bmp180::bmp180_read_temp_pressure(&sensor, &temp, &pressure))
+    {
+      printf("Time: %.2f\n", (float)to_ms_since_boot(get_absolute_time()) / 1000.0f);
+      printf("Temp: %.2f\n", temp);
+      printf("Pressure: %.2f\n\n", pressure / 100.0f);
+    }
+    
+    vTaskDelay(1);
   }
 }

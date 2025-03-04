@@ -49,6 +49,7 @@
       "cstring": "cpp",
       "lsm6dsl.hpp": "c",
       "ms5611.h": "c",
-      "cstdio": "c"
+      "cstdio": "c",
+      "cstdint": "cpp"
     }
 }
