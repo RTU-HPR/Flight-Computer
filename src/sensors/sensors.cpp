@@ -113,3 +113,17 @@ void bmp180_task(void *pvParameters)
     vTaskDelay(1);
   }
 }
+
+void sts35_task(void *pvParameters)
+{
+  sts35::sts35_init();
+
+  while (true)
+  {
+    float temp;
+    sts35::sts35_read_temp(&temp);
+    printf("Time: %.2f\n", (float)to_ms_since_boot(get_absolute_time()) / 1000.0f);
+    printf("STS35 Temp: %.2f\n\n", temp);
+    vTaskDelay(100);
+  }
+}

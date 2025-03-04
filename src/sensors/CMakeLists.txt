@@ -13,4 +13,5 @@ target_link_libraries(sensors
     lsm6dsl
     ms5611
     bmp180
+    sts35
 )

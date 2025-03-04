@@ -50,6 +50,8 @@
       "lsm6dsl.hpp": "c",
       "ms5611.h": "c",
       "cstdio": "c",
-      "cstdint": "cpp"
+      "cstdint": "cpp",
+      "sts4x_i2c.h": "c",
+      "sensirion_i2c_hal.h": "c"
     }
 }

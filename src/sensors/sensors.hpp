@@ -20,7 +20,9 @@
 #include "lsm6dsl.hpp"
 #include "ms5611.hpp"
 #include "bmp180.hpp"
+#include "sts35.hpp"
 
 void lsm6dsl_task(void *pvParameters);
 void ms5611_task(void *pvParameters);
 void bmp180_task(void *pvParameters);
+void sts35_task(void *pvParameters);
