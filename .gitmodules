@@ -4,3 +4,6 @@
 [submodule "lib/FreeRTOS-FAT-CLI-for-RPi-Pico"]
 	path = lib/FreeRTOS-FAT-CLI-for-RPi-Pico
 	url = https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico.git
+[submodule "lib/lsm6dsl-pid"]
+	path = lib/lsm6dsl-pid
+	url = https://github.com/STMicroelectronics/lsm6dsl-pid.git
