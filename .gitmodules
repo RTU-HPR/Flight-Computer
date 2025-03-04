@@ -7,3 +7,6 @@
 [submodule "lib/FreeRTOS-FAT-CLI-for-RPi-Pico"]
 	path = lib/FreeRTOS-FAT-CLI-for-RPi-Pico
 	url = https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico.git
+[submodule "lib/ms5611"]
+	path = lib/ms5611
+	url = https://github.com/libdriver/ms5611.git

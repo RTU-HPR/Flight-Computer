@@ -11,4 +11,5 @@ target_link_libraries(sensors
     pico_stdlib
     FreeRTOS-Kernel-Heap4
     lsm6dsl
+    ms5611
 )

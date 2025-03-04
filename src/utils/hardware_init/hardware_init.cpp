@@ -78,6 +78,7 @@ void init_hardware()
 {
   init_gpio();
   enable_power();
+  // disable_power();
   init_i2c();
   init_spi();
   init_adc();

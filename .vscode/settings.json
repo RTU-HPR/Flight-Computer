@@ -46,6 +46,9 @@
       "ff.h": "c",
       "dma_interrupts.h": "c",
       "vector": "cpp",
-      "cstring": "cpp"
+      "cstring": "cpp",
+      "lsm6dsl.hpp": "c",
+      "ms5611.h": "c",
+      "cstdio": "c"
     }
 }

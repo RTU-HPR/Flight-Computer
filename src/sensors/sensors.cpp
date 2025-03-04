@@ -65,3 +65,30 @@ void lsm6dsl_task(void *pvParameters)
     vTaskDelay(1);
   }
 }
+
+void ms5611_task(void *pvParameters)
+{
+  printf("MS5611 Task Started\n");
+  MS5611_Sensor sensor;
+  printf("MS5611 Sensor Created\n");
+  
+  if (!ms5611_init(&sensor))
+  {
+    printf("MS5611 Sensor Initialization Failed\n");
+    vTaskDelete(NULL);
+  }
+
+  printf("MS5611 Sensor Initialized\n");
+  while (true)
+  {
+    float temp, pressure;
+    if (ms5611_read_temp_pressure(&sensor, &temp, &pressure))
+    {
+    }
+    printf("Time: %.2f\n", (float)to_ms_since_boot(get_absolute_time()) / 1000.0f);
+    printf("Temp: %.2f\n", temp);
+    printf("Pressure: %.2f\n\n", pressure);
+    
+    vTaskDelay(100);
+  }
+}
