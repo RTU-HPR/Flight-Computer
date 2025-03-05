@@ -14,4 +14,5 @@ target_link_libraries(sensors
     ms5611
     bmp180
     sts35
+    adc
 )

@@ -62,6 +62,7 @@ void init_adc()
   adc_init();
   adc_gpio_init(V_SENSE_PIN);
   adc_gpio_init(THERM_PIN);
+  adc_set_temp_sensor_enabled(true);
 }
 
 void enable_power()

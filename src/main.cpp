@@ -73,7 +73,8 @@ int main()
   // xTaskCreate(lsm6dsl_task, "LSM6DSL Task", 256, NULL, 1, NULL);
   // xTaskCreate(ms5611_task, "MS5611 Task", 2048, NULL, 1, NULL);
   // xTaskCreate(bmp180_task, "BMP180 Task", 2048, NULL, 1, NULL);
-  xTaskCreate(sts35_task, "STS35 Task", 2048, NULL, 1, NULL);
+  // xTaskCreate(sts35_task, "STS35 Task", 2048, NULL, 1, NULL);
+  xTaskCreate(adc_task, "BME280 Task", 2048, NULL, 1, NULL);
   vTaskStartScheduler();
 
   panic_unsupported();  // Should never reach here

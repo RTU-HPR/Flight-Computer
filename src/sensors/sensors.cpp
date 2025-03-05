@@ -127,3 +127,20 @@ void sts35_task(void *pvParameters)
     vTaskDelay(100);
   }
 }
+
+void adc_task(void *pvParameters)
+{
+  while (true)
+  {
+    float battery_voltage = read_battery_voltage();
+    float thermistor_temp = thermistor_read_temperature();
+    float onboard_temp = read_onboard_temperature();
+
+    printf("Time: %.2f\n", (float)to_ms_since_boot(get_absolute_time()) / 1000.0f);
+    printf("Battery Voltage: %.2f\n", battery_voltage);
+    printf("Thermistor Temp: %.2f\n", thermistor_temp);
+    printf("Onboard Temp: %.2f\n\n", onboard_temp);
+
+    vTaskDelay(100);
+  }
+}
