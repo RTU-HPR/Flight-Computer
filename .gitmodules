@@ -10,3 +10,6 @@
 [submodule "lib/ms5611"]
 	path = lib/ms5611
 	url = https://github.com/libdriver/ms5611.git
+[submodule "lib/PX4-GPSDrivers"]
+	path = lib/PX4-GPSDrivers
+	url = https://github.com/PX4/PX4-GPSDrivers.git
